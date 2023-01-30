@@ -18,13 +18,19 @@ export class Home extends Component {
             <table className='table table-striped' aria-labelledby="tabelLabel">
                 <thead>
                     <tr>
+                        <th>#</th>
                         <th>Name</th>
+                        <th>Difficulty</th>
+                        <th>Category</th>
                     </tr>
                 </thead>
                 <tbody>
                     {problems.map(problems =>
-                        <tr key={problems.name}>
+                        <tr key={problems.number}>
+                            <td>{problems.number}</td>
                             <td>{problems.name}</td>
+                            <td>{problems.difficulty}</td>
+                            <td>{problems.category}</td>
                         </tr>
                     )}
                 </tbody>
